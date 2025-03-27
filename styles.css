@@ -23,6 +23,7 @@
     padding: 0 20px;
     z-index: 10;
     align-items: center;
+    backdrop-filter: blur(3.5px)
 }
 
 .head-right {
@@ -98,11 +99,10 @@
     align-items: center;
     color: white;
     text-align: center;
-    padding: 20px;
-    animation: fadeIn 2s ease-in-out;
+    animation: fade 2s ease-in-out;
 }
 
-@keyframes fadeIn {
+@keyframes fade {
     from { 
         opacity: 0;
     }
@@ -112,7 +112,14 @@
 }
 
 .about {
-    width: 700px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    backdrop-filter: blur(1.5px);
 }
 
 .about h1 {
