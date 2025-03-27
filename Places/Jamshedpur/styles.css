@@ -111,7 +111,7 @@
 .intro {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #333333, #b0b0b0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,8 +193,10 @@
 }
 
 .detail {
+    height: 100%;
     padding: 15px 20px;
     color: white;
+    /* border: 2px solid black; */
 }
 
 .detail h2 {
@@ -237,4 +239,27 @@
 
 .button:hover {
     transform: scale(1.05);
+}
+
+.head {
+    background: rgba(51, 51, 51, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.intro {
+    background: linear-gradient(to right, rgba(23, 32, 42, 0.8), rgba(51, 51, 51, 0.8));
+    backdrop-filter: blur(4px);
+}
+
+.card {
+    background: rgba(51, 51, 51, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.detail p {
+    color: #bbbbbb;
+}
+
+.button {
+    background-color: #e74c3c;
 }
