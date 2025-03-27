@@ -100,6 +100,7 @@
     color: white;
     text-align: center;
     animation: fade 2s ease-in-out;
+    backdrop-filter: blur(3px);
 }
 
 @keyframes fade {
@@ -113,13 +114,12 @@
 
 .about {
     height: 100%;
-    width: 100%;
+    max-width: 1170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 10px;
-    backdrop-filter: blur(1.5px);
 }
 
 .about h1 {
