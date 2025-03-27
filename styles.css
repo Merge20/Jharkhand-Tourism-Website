@@ -23,7 +23,8 @@
     padding: 0 20px;
     z-index: 10;
     align-items: center;
-    backdrop-filter: blur(3.5px)
+    backdrop-filter: blur(3.5px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.575);
 }
 
 .head-right {
@@ -40,6 +41,65 @@
 
 .redirect a:hover {
     color: #f4a261;
+}
+
+.places {
+    position: relative;
+}
+
+.toggle{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.toggle svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -25px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.places .options a {
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease-in-out;
+}
+.toggle{
+    transition: color 0.3s ease-in-out;
+}
+
+.toggle:hover{
+    color: #f4a261;
+}
+
+.options a:hover {
+    background: #f4a261;
+}
+
+.places.active .options {
+    display: flex;
+}
+
+.places.active button svg {
+    transform: rotate(180deg);
 }
 
 .body {
@@ -141,7 +201,7 @@
 }
 
 .button {
-    display: inline-block;
+    /* display: inline-block; */
     background-color: #f4a261;
     color: white;
     padding: 12px 25px;
@@ -155,8 +215,6 @@
     background-color: #e76f51;
 }
 
-
-
 .foot {
     height: 80px;
     background: #222;
@@ -165,4 +223,5 @@
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.575);
 }
