@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccd6e2;
+}
+
+.box:hover {
+  transform: scale(1.03);
+  
+}
+
+.box {
+  background-color: pink;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+}
+
+
+.grid-container {
+  display: grid;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 1400px;
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: minmax();
+  gap: 1rem;
+  grid-auto-flow: dense;
+  grid-template-areas:
+    'box-1 box-2 box-2 box-3'
+    'box-1 box-4 box-5 box-5'
+    'box-6 box-7 box-7 box-8'
+    'box-9 box-9 box-10 box-10'
+
+    /*----------------------------*/
+
+    'box-9 box-9 box-10 box-10'
+    'box-11 box-12 box-13 box-14'
+    'box-11 box-15 box-16 box-14'
+    'box-17 box-17 box-18 box-18'
+
+    /*-----------------------------*/
+
+    'box-17 box-17 box-18 box-18'
+    'box-19 box-20 box-20 box-21'
+    'box-22 box-23 box-23 box-24'
+    'box-25 box-25 box-26 box-26'
+
+    /*-----------------------------*/
+    'box-27 box-27 box-27 box-27'
+    'box-28 box-29 box-29 box-30'
+    'box-28 box-31 box-31 box-30'
+    'box-32 box-32 box-33 box-33'
+    'box-34 box-34 box-35 box-35'
+    'box-36 box-36 box-35 box-35'
+
+    /*-----------------------------*/
+    'box-37 box-38 box-38 box-39'
+    'box-37 box-40 box-41 box-42'
+    'box-43 box-43 box-44 box-44'
+    'box-45 box-45 box-45 box-45'
+  ;
+
+}
+
+.grid-container .box {
+  border-radius: 10px;
+  overflow: hidden;
+}
