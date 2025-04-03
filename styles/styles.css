@@ -162,7 +162,7 @@
     color: white;
     text-align: center;
     animation: fade 2s ease-in-out;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(.8px);
 }
 
 @keyframes fade {
