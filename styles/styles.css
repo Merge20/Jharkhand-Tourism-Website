@@ -149,6 +149,8 @@
     }
 }
 
+
+
 .intro {
     position: absolute;
     width: 100%;
@@ -215,7 +217,8 @@
     background-color: #e76f51;
 }
 
-.foot, .bottom-bar{
+
+.bottom-bar{
     height: 80px;
     background: #222;
     color: white;
@@ -224,10 +227,6 @@
     align-items: center;
     font-size: 1rem;
     border-top: 2px solid rgba(255, 255, 255, 0.575);
-}
-
-.bottom-bar{
-    border-top: none;
 }
 
 .foot-button{
