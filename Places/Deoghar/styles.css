@@ -8,7 +8,7 @@
 
 .container {
     min-height: 100vh;
-    /* max-width: 1370px; */
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -37,6 +37,12 @@
     font-size: 1.3rem;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
+    /* text-align: left; */
+}
+
+.redirect{
+    display: flex;
+    align-items: center;
 }
 
 .redirect a:hover {
@@ -47,7 +53,7 @@
     position: relative;
 }
 
-.toggle {
+.toggle{
     background: none;
     border: none;
     color: white;
@@ -57,11 +63,6 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    transition: color 0.3s ease-in-out;
-}
-
-.toggle:hover {
-    color: #f4a261;
 }
 
 .toggle svg {
@@ -84,7 +85,15 @@
     color: white;
     padding: 10px 15px;
     font-size: 1.2rem;
+    backdrop-filter: blur(5px);
     transition: background 0.3s ease-in-out;
+}
+.toggle{
+    transition: color 0.3s ease-in-out;
+}
+
+.toggle:hover{
+    color: #f4a261;
 }
 
 .options a:hover {
@@ -98,6 +107,45 @@
 .places.active button svg {
     transform: rotate(180deg);
 }
+
+.username-display {
+    color: #f4a261;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-right: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f4a261;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.account-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.logout-button {
+    background: none;
+    border: 2px solid #f4a261;
+    color: #f4a261;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    background-color: #f4a261;
+    color: black;
+}
+
 
 .body {
     height: auto;

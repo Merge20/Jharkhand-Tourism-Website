@@ -135,6 +135,12 @@ p {
     font-size: 1.3rem;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
+    /* text-align: left; */
+}
+
+.redirect{
+    display: flex;
+    align-items: center;
 }
 
 .redirect a:hover {
@@ -166,22 +172,19 @@ p {
     position: absolute;
     top: 100%;
     left: -25px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(15px);
     border-radius: 5px;
     overflow: hidden;
     flex-direction: column;
-    
 }
-    
-    
+
 .places .options a {
     color: white;
     padding: 10px 15px;
     font-size: 1.2rem;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
     transition: background 0.3s ease-in-out;
-    text-align: left;
 }
 .toggle{
     transition: color 0.3s ease-in-out;
@@ -201,4 +204,71 @@ p {
 
 .places.active button svg {
     transform: rotate(180deg);
+}
+
+.username-display {
+    color: #f4a261;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-right: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f4a261;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.account-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.logout-button {
+    background: none;
+    border: 2px solid #f4a261;
+    color: #f4a261;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    background-color: #f4a261;
+    color: black;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f4a261;
+    border-radius: 6px;
+    resize: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.comment-section .comment {
+    background: #292929;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-align: left;
+}
+.comment-section strong {
+    color: #f4a261;
+    font-size: 1.1rem;
+}
+.comment-section small {
+    color: #888;
+    font-size: 0.9rem;
 }

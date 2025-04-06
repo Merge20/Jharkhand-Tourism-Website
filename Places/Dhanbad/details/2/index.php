@@ -1,0 +1,98 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: ../../../../index.php");
+    exit();
+}
+$username = $_SESSION['user'];
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Tourist Spots|Jagannath temple</title>
+    <link rel="icon" type="image/x-icon"  href="Assets/tab-icon.ico">
+</head>
+
+<body>
+    <div class="head">
+    <div class="head-left">
+            	<div class="user-info">
+                	<img src="./php/account.svg" alt="Account" class="account-icon">
+                	<span class="username"><?php echo htmlspecialchars($username); ?></span>
+            	</div>
+            </div>
+        <div class="head-right">
+            <div class="home redirect">
+                <a href="../../../../home/index.php">Home</a>
+            </div>
+            <div class="places redirect ">
+                <button class="toggle ">Places
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </button>
+                <div class="options ">
+                    <a href="../../../ranchi/index.php">Ranchi</a>
+                    <a href="../../../Dhanbad/index.php">Dhanbad</a>
+                    <a href="../../../Deoghar/index.php">Deoghar</a>
+                    <a href="../../../Hazaribagh/index.php">Hazaribagh</a>
+                    <a href="../../../jamshedpur/index.php">Jamshedpur</a>
+                </div>
+            </div>
+            <div class="gallery redirect">
+                <a href="../../../../Gallery/index.php">Gallery</a>
+            </div>
+            <div class="logout redirect">
+              		<form action="./php/logout.php" method="POST">
+                   		<button class="logout-button" type="submit">Log Out</button>
+              		</form>
+            	</div>
+        </div>
+    </div>
+
+    <div class="header-image">
+        <img src="./Jagannath_temple.avif" alt="Jagannath temple">
+        <div class="header-overlay">
+            <h1>Jagannath temple</h1>
+        </div>
+    </div>
+    <div class="content">
+        <h1>About Jagannath temple</h1>
+        <p>Jagannath Temple in Dhanbad is a revered Hindu temple dedicated to Lord Jagannath. The temple is a significant spiritual destination, attracting devotees and tourists alike. With its striking resemblance to the famous Jagannath Temple in Puri, Odisha, the temple stands as an architectural marvel, showcasing intricate carvings and a serene ambiance.</p>
+        <p>Surrounded by lush greenery, the temple complex provides a peaceful environment for worshippers and visitors. The temple hosts various religious ceremonies and festivals, with the annual Rath Yatra being one of the most celebrated events, drawing large crowds who participate in the grand procession. The spiritual aura of the temple, combined with its stunning design, makes it a must-visit destination for those seeking divine blessings.</p>
+        <p>Beyond its religious significance, the Jagannath Temple also serves as a cultural landmark in Dhanbad, reflecting the region's deep-rooted traditions and devotion. Whether visiting for prayers, meditation, or simply to admire its architectural beauty, the temple offers a fulfilling and spiritual experience for everyone.</p>
+    </div>
+    <div class="comments">
+        <h2>Comments</h2>
+
+        <form action="./php/submit_comment.php" method="POST">
+            <textarea name="comment_text" rows="4" cols="50" placeholder="Write your comment here..." required></textarea>
+            <input type="hidden" name="place_id" value="8">
+            <br>
+            <button type="submit" class="logout-button">Post Comment</button>
+        </form>
+
+
+        <div class="comment-section">
+            <?php 
+                $_GET['place_id'] = 8;
+                include './php/fetch_comments.php'; 
+            ?>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

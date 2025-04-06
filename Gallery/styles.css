@@ -4,7 +4,13 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  /* overflow-x: hidden; */
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .head {
@@ -14,7 +20,7 @@
   position: fixed;
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  padding: 0 40px;
+  padding: 0 20px;
   z-index: 10;
   align-items: center;
   backdrop-filter: blur(3.5px);
@@ -23,14 +29,20 @@
 
 .head-right {
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }
 
 .redirect a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
+  /* text-align: left; */
+}
+
+.redirect{
+  display: flex;
+  align-items: center;
 }
 
 .redirect a:hover {
@@ -45,7 +57,7 @@
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   cursor: pointer;
   display: flex;
@@ -71,12 +83,11 @@
 
 .places .options a {
   color: white;
-  padding: 12px 18px;
-  font-size: 1.3rem;
+  padding: 10px 15px;
+  font-size: 1.2rem;
   backdrop-filter: blur(5px);
   transition: background 0.3s ease-in-out;
 }
-
 .toggle{
   transition: color 0.3s ease-in-out;
 }
@@ -96,6 +107,45 @@
 .places.active button svg {
   transform: rotate(180deg);
 }
+
+.username-display {
+  color: #f4a261;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-right: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f4a261;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.account-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.logout-button {
+  background: none;
+  border: 2px solid #f4a261;
+  color: #f4a261;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background-color: #f4a261;
+  color: black;
+}
+
 
 body {
   justify-content: center;
@@ -229,3 +279,4 @@ body {
 .box a img {
   filter: brightness(0.9);
 }
+
