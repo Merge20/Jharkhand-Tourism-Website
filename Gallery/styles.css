@@ -6,6 +6,80 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* ===== NATURAL LIGHT THEME ===== */
+:root {
+  --bg-color: #f5f3f0; /* Warm parchment-like background */
+  --card-color: #fdfcfa; /* Slightly off-white cards */
+  --text-main: #3a3a3a; /* Soft black */
+  --accent: #e2725b; /* Earthy coral */
+  --border-light: #e0d9d1; /* Warm subtle border */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.head {
+  background: rgba(253, 252, 250, 0.96);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+}
+
+.redirect a, 
+.toggle {
+  color: var(--text-main);
+}
+
+.redirect a:hover, 
+.toggle:hover {
+  color: var(--accent);
+}
+
+.box {
+  background: var(--card-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-light);
+  transition: all 0.25s ease-out;
+}
+
+.box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(226, 114, 91, 0.08);
+}
+
+.options {
+  background: var(--card-color);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.options a:hover {
+  background: rgba(226, 114, 91, 0.05);
+}
+
+.logout-button {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.logout-button:hover {
+  background: var(--accent);
+}
+
+/* ===== IMAGE ENHANCEMENTS ===== */
+.box img {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+.box:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.02);
+}
+
+/* ===== PRESERVED LAYOUT ===== */
+/* [Your existing grid and structural CSS remains unchanged below] */
+
 .container {
   min-height: 100vh;
   width: 100%;
@@ -19,12 +93,19 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(20, 20, 20, 0.95);
   padding: 0 20px;
   z-index: 10;
   align-items: center;
-  backdrop-filter: blur(3.5px);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.575);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(244, 162, 97, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.head:hover {
+  background: rgba(30, 30, 30, 0.98);
+  border-bottom: 1px solid rgba(244, 162, 97, 0.5);
 }
 
 .head-right {
@@ -36,11 +117,11 @@
   color: white;
   font-size: 1.3rem;
   font-weight: 500;
-  transition: color 0.3s ease-in-out;
-  /* text-align: left; */
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
-.redirect{
+.redirect {
   display: flex;
   align-items: center;
 }
@@ -49,11 +130,26 @@
   color: #f4a261;
 }
 
+.redirect a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #f4a261;
+  transition: width 0.3s ease;
+}
+
+.redirect a:hover::after {
+  width: 100%;
+}
+
 .places {
   position: relative;
 }
 
-.toggle{
+.toggle {
   background: none;
   border: none;
   color: white;
@@ -63,6 +159,8 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 .toggle svg {
@@ -74,34 +172,55 @@
   position: absolute;
   top: 100%;
   left: -25px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(40, 40, 40, 0.95);
   backdrop-filter: blur(15px);
-  border-radius: 5px;
+  border-radius: 8px;
   overflow: hidden;
   flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .places .options a {
   color: white;
-  padding: 10px 15px;
+  padding: 12px 20px;
   font-size: 1.2rem;
-  backdrop-filter: blur(5px);
-  transition: background 0.3s ease-in-out;
-}
-.toggle{
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.toggle:hover{
+.places .options a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(244, 162, 97, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.places .options a:hover::before {
+  left: 100%;
+}
+
+.toggle:hover {
   color: #f4a261;
 }
 
 .options a:hover {
-  background: #f4a261;
+  background: rgba(244, 162, 97, 0.2);
+  color: #f4a261;
 }
 
 .places.active .options {
   display: flex;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .places.active button svg {
@@ -125,8 +244,17 @@
 }
 
 .account-icon {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(244, 162, 97, 0.5);
+  transition: all 0.3s ease;
+}
+
+.account-icon:hover {
+  transform: scale(1.1);
+  border-color: #f4a261;
 }
 
 .logout-button {
@@ -139,28 +267,34 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logout-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #f4a261;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.logout-button:hover::before {
+  width: 100%;
 }
 
 .logout-button:hover {
-  background-color: #f4a261;
-  color: black;
+  color: #1e1e1e;
 }
-
 
 body {
-  justify-content: center;
-  align-items: center;
-  background-color: #ccd6e2;
-}
-
-.box:hover {
-  transform: scale(1.05);
-}
-
-.box {
-  background-color: pink;
-  transition: transform 0.2s ease-in-out;
-  position: relative;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .grid-container {
@@ -198,7 +332,63 @@ body {
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 0 10px rgb(121, 121, 121); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+}
+
+.box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(244, 162, 97, 0.2);
+  z-index: 2;
+}
+
+.box a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  filter: grayscale(20%) brightness(0.9);
+}
+.box:hover a img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.05);
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.box:hover::after {
+  opacity: 0.5;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(244, 162, 97, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.box:hover::before {
+  opacity: 1;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 1400px) {
@@ -227,56 +417,99 @@ body {
   }
 }
 
-img{
-  height: 300px;
+/* Update these styles in your CSS */
+.box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
 }
 
-.box a img {
-  background-color: pink;
-  transition: transform 0.2s ease-in-out;
+.box a {
+  display: block;
+  width: 100%;
+  height: 100%;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 2; /* Ensure the anchor is above pseudo-elements */
+}
+
+.box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.5s ease;
+  filter: grayscale(20%) brightness(0.9);
+  display: block; /* Remove any extra space below image */
 }
 
-
-body {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
+/* Make sure pseudo-elements don't block clicks */
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* This allows clicks to pass through */
 }
 
-.head {
-  background: rgba(30, 30, 30, 0.85);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+.box::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
-.redirect a {
-  color: #e0e0e0;
+.box::before {
+  background: linear-gradient(45deg, rgba(244, 162, 97, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
-.toggle:hover {
-  color: #f4a261;
-}
-
-.options {
-  background: rgba(40, 40, 40, 0.9);
-}
-
-.box {
-  background-color: #333;
-  transition: transform 0.2s ease-in-out;
-}
-
+/* Hover effects remain the same */
 .box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(244, 162, 97, 0.2);
+  z-index: 2;
+}
+
+.box:hover img {
+  filter: grayscale(0%) brightness(1);
   transform: scale(1.05);
 }
 
-.box a img {
-  filter: brightness(0.9);
+.box:hover::after {
+  opacity: 0.5;
 }
 
+.box:hover::before {
+  opacity: 1;
+}
+
+/* For the grid container */
+.grid-container {
+  background-color: var(--bg-color);
+  padding: 100px 20px;
+}
+
+/* For text elements */
+.username-display {
+  color: var(--accent); /* Uses the terracotta accent */
+}
+
+/* Button styles */
+.logout-button {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.logout-button:hover {
+  background: var(--accent);
+  color: white;
+}

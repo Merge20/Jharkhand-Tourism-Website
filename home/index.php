@@ -81,7 +81,7 @@ $username = $_SESSION['user'];
                         heritage. Whether you're an adventure seeker, nature lover, or history enthusiast, Jharkhand has
                         something special for you. Explore mesmerizing waterfalls like Hundru and Dassam, witness the
                         stunning Patratu Valley, or dive into the history of Betla Fort. Begin your journey today!</p>
-                    <a href="./Gallery/index.html" class="button">Explore Now</a>
+                    <a href="../Gallery/index.php" class="button">Explore Now</a>
                 </div>
             </div>
         </div>

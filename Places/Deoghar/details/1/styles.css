@@ -5,24 +5,31 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #101010;
+    background-color: #121212;
     color: #ffffff;
-    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
 .header-image {
     width: 100%;
     height: 450px;
     position: relative;
-    backdrop-filter: blur(15px);
 }
+
 .header-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .header-overlay {
     position: absolute;
     top: 0;
@@ -35,73 +42,59 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    backdrop-filter: blur(2px);
 }
+
 .header-overlay h1 {
     font-size: 50px;
     font-weight: bold;
-    color: #ffcc00;
-    text-shadow: 3px 3px 10px rgba(255, 204, 0, 0.5);
+    color: #d4af37;
+    text-shadow: 3px 3px 10px rgba(212, 175, 55, 0.5);
 }
-.header-overlay p {
-    font-size: 20px;
-    color: #f0f0f0;
-    margin-top: 10px;
-}
+
 .content {
     padding: 50px 20px;
     max-width: 900px;
     margin: auto;
     line-height: 1.8;
 }
+
 h1 {
     font-size: 42px;
     margin-bottom: 20px;
+    color: #d4af37;
 }
+
 p {
     font-size: 18px;
     color: #cccccc;
     text-align: justify;
 }
+
 .comments {
     margin: 50px auto;
     padding: 30px;
     max-width: 800px;
     background-color: #1a1a1a;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
+
 .comments h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: #d4af37;
 }
+
 .comment {
     margin-bottom: 20px;
     padding: 15px;
     background-color: #292929;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.1);
     text-align: left;
-}
-.comment img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
-}
-
-.header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Ensure transparency */
-    backdrop-filter: blur(2px); /* Apply blur effect */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    border-left: 3px solid #d4af37;
 }
 
 .container {
@@ -117,12 +110,12 @@ p {
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(26, 18, 11, 0.9);
     padding: 0 20px;
     z-index: 10;
     align-items: center;
     backdrop-filter: blur(3.5px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.575);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.575);
 }
 
 .head-right {
@@ -135,7 +128,6 @@ p {
     font-size: 1.3rem;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
-    /* text-align: left; */
 }
 
 .redirect{
@@ -144,7 +136,7 @@ p {
 }
 
 .redirect a:hover {
-    color: #f4a261;
+    color: #d4af37;
 }
 
 .places {
@@ -172,30 +164,31 @@ p {
     position: absolute;
     top: 100%;
     left: -25px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(26, 18, 11, 0.95);
     backdrop-filter: blur(15px);
     border-radius: 5px;
     overflow: hidden;
     flex-direction: column;
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .places .options a {
     color: white;
     padding: 10px 15px;
     font-size: 1.2rem;
-    backdrop-filter: blur(5px);
     transition: background 0.3s ease-in-out;
 }
+
 .toggle{
     transition: color 0.3s ease-in-out;
 }
 
 .toggle:hover{
-    color: #f4a261;
+    color: #d4af37;
 }
 
 .options a:hover {
-    background: #f4a261;
+    background: rgba(212, 175, 55, 0.2);
 }
 
 .places.active .options {
@@ -207,7 +200,7 @@ p {
 }
 
 .username-display {
-    color: #f4a261;
+    color: #d4af37;
     font-weight: 600;
     font-size: 1.2rem;
     padding-right: 15px;
@@ -217,7 +210,7 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #f4a261;
+    color: #d4af37;
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -225,12 +218,14 @@ p {
 .account-icon {
     height: 50px;
     width: 50px;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
 }
 
 .logout-button {
     background: none;
-    border: 2px solid #f4a261;
-    color: #f4a261;
+    border: 2px solid #d4af37;
+    color: #d4af37;
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 1rem;
@@ -240,14 +235,14 @@ p {
 }
 
 .logout-button:hover {
-    background-color: #f4a261;
-    color: black;
+    background-color: #d4af37;
+    color: #121212;
 }
 
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #f4a261;
+    border: 1px solid #d4af37;
     border-radius: 6px;
     resize: none;
     margin-top: 10px;
@@ -264,7 +259,7 @@ textarea {
     text-align: left;
 }
 .comment-section strong {
-    color: #f4a261;
+    color: #d4af37;
     font-size: 1.1rem;
 }
 .comment-section small {
@@ -272,3 +267,19 @@ textarea {
     font-size: 0.9rem;
 }
 
+form button[type="submit"] {
+    background-color: #d4af37;
+    color: #121212;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #b5942e;
+}

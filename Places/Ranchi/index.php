@@ -98,7 +98,7 @@ $username = $_SESSION['user'];
                     </div>
                     <div class="detail">
                         <h2>Jonha Fall</h2>
-                        <p>Also known as Gautamdhara Falls, Jonha Falls is perfect for waterfall enthusiasts who enjoy a bit of trekking. It's one of the famous places in Ranchi where the sounds of nature blend with peace. Tucked away in a lush forest, the view of water cascading down the hills is a paradise for nature lovers. The ideal time to visit is after the monsoon, from September to February. Activities include trekking to the base, taking photographs, and visiting the nearby temple dedicated to Lord Buddha.</p>
+                        <p>Also known as Gautamdhara Falls, Jonha Falls is perfect for waterfall enthusiasts who enjoy a bit of trekking. It's one of the famous places in Ranchi where the sounds of nature blend with peace. Tucked away in a lush forest, the view of water cascading down the hills is a paradise for nature lovers. The ideal time to visit is after the monsoon, from September to February.</p>
                     </div>
                     <div class="go-to">
                         <a href="./details/3/index.php" class="button">Explore Now</a>
@@ -126,7 +126,7 @@ $username = $_SESSION['user'];
                     </div>
                     <div class="detail detail2">
                         <h2>Nakshatra Van</h2>
-                        <p>Have you ever imagined what a zodiac-themed garden would look like? Nakshatra Van is among the best places to visit in Ranchi, seamlessly blending science, spirituality, and nature. Designed according to Vedic astrology, the park features trees that correspond to various Nakshatras. The park is organized into sections that represent astrological signs, with lush greenery, enhancing its appeal. Whether you believe in astrology or are just seeking a peaceful getaway, this Ranchi tourist place is worth a visit.</p>
+                        <p>Have you ever imagined what a zodiac-themed garden would look like? Nakshatra Van is among the best places to visit in Ranchi, seamlessly blending science, spirituality, and nature. Designed according to Vedic astrology, the park features trees that correspond to various Nakshatras. The park is organized into sections that represent astrological signs, with lush greenery, enhancing its appeal.</p>
                     </div>
                     <div class="go-to">
                         <a href="./details/5/index.php" class="button">Explore Now</a>
@@ -139,7 +139,7 @@ $username = $_SESSION['user'];
                     </div>
                     <div class="detail detail3">
                         <h2>Rock Garden</h2>
-                        <p>Constructed from the remnants of a dam, the Rock Garden is a well-known spot in Ranchi that beautifully combines creativity with natural beauty. The garden boasts rock-cut sculptures, lovely pathways, and an artificial waterfall, making it an ideal picnic destination. It’s one of the top places to visit in Ranchi, especially for watching the sunset. The best time to go is from November to February when the weather is delightful. You can explore the artistic sculptures, unwind by the lake, and capture stunning sunset views.</p>
+                        <p>Constructed from the remnants of a dam, the Rock Garden is a well-known spot in Ranchi that beautifully combines creativity with natural beauty. The garden boasts rock-cut sculptures, lovely pathways, and an artificial waterfall, making it an ideal picnic destination. The best time to go is from November to February when the weather is delightful. You can explore the artistic sculptures, unwind by the lake, and capture stunning sunset views.</p>
                     </div>
                     <div class="go-to">
                         <a href="./details/6/index.php" class="button">Explore Now</a>
