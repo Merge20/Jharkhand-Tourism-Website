@@ -1,6 +1,6 @@
 # 🏞️ Jharkhand Tourism Website
 
-A web-based platform designed to showcase the beauty, culture, and popular travel destinations of **Jharkhand, India**. Built as a project by Diploma CSE students, this responsive website provides information about tourist attractions, user interaction through contact forms, and a clean UI/UX.
+A web-based platform designed to showcase the beauty, culture, and popular travel destinations of **Jharkhand, India**. Built as a project by Diploma CSE students of Sarala Birla University, this responsive website provides information about tourist attractions, user interaction through contact forms, and a clean UI/UX.
 
 ---
 
@@ -8,7 +8,6 @@ A web-based platform designed to showcase the beauty, culture, and popular trave
 
 - 🗺️ Explore major tourist destinations across Jharkhand  
 - 📷 Destination cards with images and details  
-- 📞 Contact form with backend integration (PHP + MySQL)  
 - 📱 Fully responsive design (works on desktop, tablet, and mobile)  
 - ⚙️ Built using HTML, CSS, JavaScript, PHP, and MySQL  
 - 📂 Hosted locally via XAMPP server
@@ -29,11 +28,14 @@ A web-based platform designed to showcase the beauty, culture, and popular trave
 /Project
 │
 ├── /assets           # Images, icons, etc.
-├── /css              # Stylesheets
-├── /js               # Scripts
-├── /php              # Backend PHP scripts
-├── /database         # SQL and db connection files
-├── index.html        # Homepage
-├── contact.html      # Contact page
-├── about.html        # About Us
+├── /database         # Database connections files
+├── /gallery          # Gallery page
+├── /home             # Home page
+├── /places           # Data of places tab and all places cards data
+├── /signup           # Registeration form file
+├── /sql              # Sql file for database tables structure
+├── index.html        # Login page
+├── manage.php        # Php for login page
+├── script.js         # JS for login and registeration page
+├── styles.css        # Login page stylesheet
 └── README.md         # Project overview
