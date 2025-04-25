@@ -24,7 +24,7 @@
             <script>
                 setTimeout(() => {
                     window.location.href = "../index.php";
-                }, 3000); // 3000ms = 3 seconds
+                }, 3000);
             </script>
         <?php endif; ?>
 

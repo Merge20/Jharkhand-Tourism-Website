@@ -5,7 +5,6 @@
         $last_name = $_POST["last"];
         $username = $_POST["username"];
         $email = $_POST["email"];
-        // $password = $_POST["password"];
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
         try{

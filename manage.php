@@ -14,15 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user = $stmt->fetch();
 
         if ($user && $password === $user["password"]) {
-            // Login successful
             $_SESSION["user"] = $user["username"];
-            $_SESSION["user_id"] = $user["id"]; // ← ADD THIS LINE
+            $_SESSION["user_id"] = $user["id"];
             $_SESSION["email"] = $user["email"];
 
             header("Location: ./home/index.php");
             exit();
         } else {
-            // Invalid credentials
             $_SESSION["error"] = "Invalid email or password.";
             header("Location: index.php");
             exit();
