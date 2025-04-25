@@ -1,6 +1,6 @@
 <?php
 
-    $dbh = "mysql: host=localhost; dbname=registeration";
+    $dbh = "mysql: host=localhost; dbname=tourism";
 
     $dbusername = "root";
     $dbpassword = "";
